@@ -16,6 +16,11 @@
     <link href="css/style.min.css" rel="stylesheet">
     <style type="text/css">
 
+
+      body {
+  		margin: 0;
+			}
+
       html,
       body,
       header,
@@ -39,13 +44,55 @@
         .carousel {
           height: 100vh;
         }
+        body {
+        	margin: 0;
+        }
       }
 
       @media (min-width: 800px) and (max-width: 850px) {
               .navbar:not(.top-nav-collapse) {
                   background: #1C2331!important;
               }
+              body {
+              	margin: 0;
+              }
           }
+
+
+.row_gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column_gallery {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column_gallery img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column_gallery {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column_gallery {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
     </style>
 </head>
 
@@ -380,27 +427,44 @@
       <!--Section: Main info-->
       <section class="mt-5 wow fadeIn">
 
-      	<div class="header">
-  <h2 class="my-5 h3 text-center">Gallery</h2>
-</div>
+      <h2 class="my-5 h3 text-center">Gallery</h2>
+
         <!--Grid row-->
-     <div class="row_gallery"> 
-  <div class="column_gallery">
-   <!--  <img src="img/underwater.jpg" style="padding-bottom: 5%"> -->
-    <!-- <img src="img/mountainskies.jpg">
-    <img src="img/rocks.jpg">
-    <img src="img/underwater.jpg"> -->
-   
+ <div class="row_gallery"> 
+  <div class="column_gallery" style="width:100%">
+    <img src="img/flower_2.jpg" style="width:100%">
+    <img src="img/rocks.jpg" style="width:100%">
+    <img src="img/flower_4.png" style="width:100%">
+    
+    
   </div>
- <!--  <div class="column_gallery">
-    <img src="img/rocks.jpg">
-    <img src="img/underwater.jpg">
-    <img src="img/wedding.jpg">
-    <img src="img/mountainskies.jpg">
-  </div>  -->
-  
+  <div class="column_gallery">
+    <img src="img/flower_6.jpg" style="width:100%">
+    <img src="img/flower_3.jpg" style="width:100%">
+   	<img src="img/wedding.jpg" style="width:100%">
+   	<img src="img/lily.jpg" style="width:100%">
+   	
+    
+    
+  </div> 
+  <div class="column_gallery">
+    <img src="img/wedding.jpg" style="width:100%">
+    <img src="img/flower_5.jpg" style="width:100%">
+    <img src="img/sample.jpg" style="width:100%">
+    <img src="img/flower_6.jpg" style="width:100%">
+    
+    
+  </div>
+  <div class="column_gallery">
+    <img src="img/underwater.jpg" style="width:100%">
+    <img src="img/wedding.jpg" style="width:100%">
+    <img src="img/flower.jpg" style="width:100%">
+    <img src="img/dark.jpg" style="width:100%">
+    
+  </div>
 </div>
-</section>
+  
+  </section>
 </div>
 
       <!--Section: Main info-->
@@ -536,7 +600,7 @@
 
 
   <!--Footer-->
-  <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+  <footer class="page-footer text-center font-small mt-4">
 
     <!--Call to action-->
     <div class="pt-4">
